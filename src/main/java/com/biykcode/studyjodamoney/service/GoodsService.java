@@ -23,10 +23,10 @@ public class GoodsService {
   private GoodsMapper goodsMapper;
 
   public int save() {
-    Goods goods = Goods.builder().name("显示器").price(Money.of(CurrencyUnit.of("CNY"), 200)).build();
-    Long id = goodsMapper.save(goods);
-    log.info("返回的id={}", id);
-    return Math.toIntExact(id);
+    Goods goods = Goods.builder().name("显示器2").price(Money.of(CurrencyUnit.of("CNY"), 200)).build();
+    Long count = goodsMapper.save(goods);
+    log.info("返回的count={}", count);
+    return Math.toIntExact(count);
   }
 
   public Goods findById(Long id) {
